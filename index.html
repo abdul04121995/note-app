@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav container">
+        <input
+          type="text"
+          name=""
+          class="nav-input"
+          id=""
+          autocomplete="off"
+          value=""
+          placeholder="Search"
+        />
+        <div class="nav-btns">
+          <button class="nav-btns__add">Add</button>
+        </div>
+      </div>
+    </nav>
+    <div class="note-window">
+      <div class="note-getter">
+        <div class="note-getter__1 flex">
+          <h2 class="note-getter__1-heading">Add Note</h2>
+          <div class="note-getter__1-cross flex">
+            <img src="./icons/cross.svg" alt="" id="cross" />
+          </div>
+        </div>
+        <div class="note-getter__2 flex">
+          <div class="note-getter__2-left flex">
+            <label for="">Title</label>
+            <input type="text" name="" id="title" />
+          </div>
+          <div class="note-getter__2-right flex">
+            <label for="">Category</label>
+            <select name="" id="category">
+              <option value="">select one</option>
+              <option value="personal">Personal</option>
+              <option value="home">Home</option>
+              <option value="buisness">Buisness</option>
+            </select>
+          </div>
+        </div>
+        <div class="note-getter__3 flex flex-direction-column">
+          <label for="">Description(optional)</label>
+          <textarea name="" id="description" cols="30" rows="6"></textarea>
+        </div>
+        <div class="note-getter__4 flex">
+          <div class="message-container">
+            <!-- <p class="message">Title & Category required</p> -->
+          </div>
+          <div class="note-getter__4-btns">
+            <button id="cancel">Cancel</button>
+            <button id="adder">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="note-display container">
+        <div class="note-display__up">
+          <h2 class="note-display__up-heading">Your Notes</h2>
+          <ul class="note-display__up-links flex">
+            <li>
+              <button data-all="">All</button>
+            </li>
+            <li>
+              <button data-personal="">Personal</button>
+            </li>
+            <li>
+              <button data-home="">Home</button>
+            </li>
+            <li>
+              <button data-buisness="">Buisness</button>
+            </li>
+          </ul>
+        </div>
+        <div class="note-display__down">
+          <!-- start -->
+          <!-- <div class="note">
+            <div class="note-top flex">
+              <h2 class="note-top__category orange">Buisness</h2>
+              <div class="note-top__delete">
+                <img src="./icons/delete.svg" alt="" />
+              </div>
+            </div>
+            <div class="note-bottom">
+              <h1 class="note-bottom__title">Going to Gym</h1>
+              <p class="note-bottom__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta
+                at ullam, quisquam, veniam laudantium aperiam sapiente quae nemo
+                quibusdam cupiditate minima eaque temporibus rem cum placeat,
+                tempore doloremque nisi nostrum.
+              </p>
+            </div>
+          </div> -->
+          <!-- end -->
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

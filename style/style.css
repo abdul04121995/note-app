@@ -1,0 +1,259 @@
+:root {
+  --gray-900: 0, 0%, 13%;
+  --gray-200: 0, 0%, 93%;
+  --black: 0, 0%, 0%;
+  --white: 0, 0%, 100%;
+  --blue-400: 207, 90%, 61%;
+  --blue-500: 207, 90%, 54%;
+  --orange-900: 21, 100%, 45%;
+  --orange-200: 36, 100%, 75%;
+  --green-900: 124, 55%, 24%;
+  --green-200: 122, 37%, 74%;
+  --purple-900: 255, 61%, 39%;
+  --purple-200: 261, 46%, 74%;
+  --red-400: 1, 83%, 63%;
+  --red-500: 4, 90%, 58%;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+input {
+  font-family: inherit;
+}
+button {
+  all: unset;
+  font-family: inherit;
+  cursor: pointer;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+}
+
+img {
+  display: block;
+  /* width: 100%; */
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+/*! general classes */
+.p-t-5 {
+  padding-top: 0.5rem;
+}
+.flex {
+  display: flex;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+/*! reponsiveness setting  classes  */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+/*! styling the navbar section */
+nav {
+  padding-block: 0.8rem;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+}
+.nav-input {
+  border-radius: 8px;
+  border: 1px solid hsl(var(--blue-500));
+  background: hsl(var(--gray-200));
+  flex: 1 0 220px;
+  margin-right: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.05rem;
+}
+.nav-btns__add {
+  background-color: hsl(var(--blue-500));
+  color: hsl(var(--white));
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  border-radius: 29px;
+  /* cursor: pointer; */
+}
+/*! styling the note adder window */
+.note-window {
+  position: absolute;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(var(--black), 32%);
+  z-index: 1;
+}
+.note-getter {
+  /* border: 1px solid black; */
+  padding: 0.8rem;
+  width: 460px;
+  border-radius: 16px;
+  background-color: hsl(var(--white));
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  animation: blip 0.5s ease;
+}
+/* adding animation to note-getter  */
+@keyframes blip {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* adding animation to note-getter  */
+
+.note-getter > *:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.note-getter__1 {
+  justify-content: space-between;
+}
+.note-getter__1-cross {
+  align-items: center;
+}
+#cross {
+  cursor: pointer;
+}
+.note-getter__2 {
+}
+.note-getter__2-left {
+  flex-direction: column;
+  flex: 0 0 50%;
+  /* gap: 1.5rem; */
+}
+
+.note-getter__2-right {
+  flex-direction: column;
+  flex: 0 0 50%;
+}
+.note-getter__3 {
+}
+.note-getter__4 {
+  justify-content: space-between;
+  align-items: center;
+}
+.note-getter__4-btns button {
+  border: 1px solid black;
+  border-radius: 26px;
+}
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+#title {
+  margin-right: 0.5rem;
+}
+#title,
+#category,
+#description {
+  background-color: hsl(var(--gray-200));
+  border: 1px solid hsla(var(--black), 12%);
+  padding: 8px 0px 8px 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+}
+#description {
+  resize: none;
+  width: 100%;
+}
+.message {
+  border: 1px solid hsl(var(--blue-500));
+  border-radius: 29px;
+  padding: 0.4rem 0.8rem;
+}
+/*! styling button inside the note getter window */
+.note-getter__4-btns {
+  margin-left: auto;
+}
+#cancel {
+  padding: 8px 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 0.5rem;
+  border: 1px solid hsla(var(--black), 12%);
+}
+#adder {
+  padding: 8px 12px;
+  color: hsl(var(--white));
+  background: hsl(var(--blue-500));
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid hsla(var(--black), 12%);
+}
+/*! styling the main section where the note will be rendered */
+main {
+  background-color: hsl(var(--gray-200));
+  /* min-height: 80vh; */
+}
+.note-display__up-heading {
+  color: hsl(var(--gray-900));
+  margin-bottom: 1rem;
+  padding-inline: 0.5rem;
+}
+.note-display__up-links li {
+  padding-inline: 0.5rem;
+  color: hsla(var(--gray-900), 60%);
+}
+.note-display__down {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+.note {
+  border: 1px solid black;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: hsl(var(--white));
+  margin-inline: 0.5rem;
+}
+.note-top {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.note-top__delete {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.note-top__category {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 29px;
+}
+.note-bottom__title {
+  font-size: 1.34rem;
+  margin-bottom: 0.5rem;
+}
+/*! styling classes that are coming from js file */
+.orange {
+  color: hsl(var(--orange-900));
+  background: hsl(var(--orange-200));
+}
+.green {
+  color: hsl(var(--green-900));
+  background-color: hsl(var(--green-200));
+}
+.purple {
+  color: hsl(var(--purple-900));
+  background: hsl(var(--purple-200));
+}
