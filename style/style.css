@@ -33,6 +33,7 @@ button {
 }
 body {
   font-family: "Roboto";
+  overflow: hidden;
 }
 
 img {
@@ -90,6 +91,7 @@ nav {
   position: absolute;
   inset: 0;
   display: none;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   background-color: hsla(var(--black), 32%);
@@ -103,6 +105,12 @@ nav {
   background-color: hsl(var(--white));
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   animation: blip 0.5s ease;
+}
+
+@media screen and (max-width: 598px) {
+  .note-getter {
+    margin: 0.5rem;
+  }
 }
 /* adding animation to note-getter  */
 @keyframes blip {
@@ -130,19 +138,27 @@ nav {
 #cross {
   cursor: pointer;
 }
-.note-getter__2 {
+@media screen and (max-width: 598px) {
+  .note-getter__2 {
+    flex-direction: column;
+    /* margin-bottom: 0.5rem; */
+  }
 }
+
 .note-getter__2-left {
   flex-direction: column;
   flex: 0 0 50%;
   /* gap: 1.5rem; */
 }
+@media screen and (max-width: 598px) {
+  .note-getter__2-left {
+    margin-bottom: 0.5rem;
+  }
+}
 
 .note-getter__2-right {
   flex-direction: column;
   flex: 0 0 50%;
-}
-.note-getter__3 {
 }
 .note-getter__4 {
   justify-content: space-between;
